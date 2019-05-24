@@ -1,2 +1,5 @@
 Connect to vqfx1.  Call get_interfaces.  Pipe dictionary into jq to search for key em4
 napalm --user=antidote --password=antidotepassword --vendor=junos vqfx1 call get_interfaces | jq .em4
+
+From the device vqfx1 ping 10.0.0.15
+napalm --user=antidote --password=antidotepassword --vendor=junos vqfx1 call ping --method-kwargs="destination='10.0.0.15'"
